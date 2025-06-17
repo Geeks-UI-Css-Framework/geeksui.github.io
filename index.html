@@ -9,7 +9,7 @@
     <title>Geeks UI v2.0.2 - Modern CSS Framework | 15+ Components Available</title>
     <meta name="description"
         content="A comprehensive CSS framework with 15+ components including forms, cards, modals, progress bars, tabs, and more. Available as NPM package! Install with 'npm install geeks-ui-framework'.">
-    <link rel="stylesheet" href="GeeksUI/dist/geeks-ui.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geeks-ui-framework@2.0.2/dist/geeks-ui.min.css">
     <style>
         /* Landing Page Styles */
         * {
@@ -495,10 +495,8 @@
             <a href="#demo" class="cta-link">Explore Components</a>
         </div>
         <button class="close-btn" onclick="closeAlert()">&times;</button>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero">
+    </div> <!-- Hero Section -->
+    <section class="hero" id="hero">
         <div class="hero-content">
             <div class="version-badge">⚡ v2.0.2 - Latest Release</div>
             <h1>Geeks UI Framework</h1>
@@ -690,12 +688,15 @@
                 <div class="component-demo">
                     <h3>Dropdown</h3>
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle">Dropdown</button>
+                        <button class="btn btn-secondary dropdown-toggle">Resources</button>
                         <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Action</a>
-                            <a href="#" class="dropdown-item">Another action</a>
+                            <a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/blob/main/README.md"
+                                class="dropdown-item">Documentation</a>
+                            <a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI" class="dropdown-item">GitHub
+                                Repository</a>
                             <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item">Something else</a>
+                            <a href="https://www.npmjs.com/package/geeks-ui-framework/v/2.0.2" class="dropdown-item">NPM
+                                Package</a>
                         </div>
                     </div>
                 </div>
@@ -713,9 +714,9 @@
                     <nav class="navbar">
                         <div class="navbar-brand">Brand</div>
                         <div class="navbar-nav">
-                            <a href="#" class="nav-link active">Home</a>
-                            <a href="#" class="nav-link">About</a>
-                            <a href="#" class="nav-link">Contact</a>
+                            <a href="#hero" class="nav-link active">Home</a>
+                            <a href="#demo" class="nav-link">Components</a>
+                            <a href="mailto:contribute@geeksforgeeks.org" class="nav-link">Contact</a>
                         </div>
                     </nav>
                 </div>
