@@ -1,0 +1,66 @@
+{
+    "name": "geeksui-website",
+    "version": "2.0.2",
+    "description": "Official website for Geeks UI Framework - A modern, lightweight CSS framework with 15+ beautiful components",
+    "main": "index.html",
+    "scripts": {
+        "start": "npx http-server . -p 3000 -o",
+        "dev": "npx live-server . --port=3000 --open=/",
+        "build": "echo 'No build process needed for static site'",
+        "deploy": "gh-pages -d .",
+        "lint:html": "npx htmlhint index.html",
+        "validate": "npx html-validate index.html",
+        "serve": "npx serve . -p 3000"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Geeks-UI-Css-Framework/geeksui.github.io.git"
+    },
+    "keywords": [
+        "css-framework",
+        "ui-components",
+        "responsive-design",
+        "frontend",
+        "web-development",
+        "geeks-ui",
+        "css",
+        "html",
+        "javascript",
+        "bootstrap-alternative",
+        "lightweight",
+        "modern",
+        "mobile-first"
+    ],
+    "author": "GeeksforGeeks <contribute@geeksforgeeks.org>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Geeks-UI-Css-Framework/Geeks_UI/issues"
+    },
+    "homepage": "https://geeksui.github.io",
+    "dependencies": {
+        "geeks-ui-framework": "^2.0.2"
+    },
+    "devDependencies": {
+        "gh-pages": "^6.1.1",
+        "html-validate": "^8.18.1",
+        "htmlhint": "^1.1.4",
+        "http-server": "^14.1.1",
+        "live-server": "^1.2.2",
+        "serve": "^14.2.1"
+    },
+    "engines": {
+        "node": ">=14.0.0",
+        "npm": ">=6.0.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead",
+        "not ie <= 11"
+    ],
+    "files": [
+        "index.html",
+        "README.md",
+        "GeeksUI/"
+    ]
+}
