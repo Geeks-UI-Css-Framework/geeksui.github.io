@@ -31,12 +31,12 @@
         "modern",
         "mobile-first"
     ],
-    "author": "GeeksforGeeks <contribute@geeksforgeeks.org>",
+    "author": "Geeks UI Framework <joeycadieux161@gmail.com>",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/Geeks-UI-Css-Framework/Geeks_UI/issues"
     },
-    "homepage": "https://geeksui.github.io",
+    "homepage": "https://geeks-ui-css-framework.github.io/geeksui.github.io/",
     "dependencies": {
         "geeks-ui-framework": "^2.0.2"
     },

@@ -82,7 +82,7 @@ This repository contains the official marketing website built with:
 ## 📚 Documentation & Resources
 
 - **📖 [Full Documentation](https://github.com/Geeks-UI-Css-Framework/Geeks_UI/blob/main/README.md)**
-- **📦 [NPM Package](https://www.npmjs.com/package/geeks-ui-framework/v/2.0.2)**
+- **📦 [NPM Package](https://geeks-ui-css-framework.github.io/geeksui.github.io/)**
 - **🐛 [Report Issues](https://github.com/Geeks-UI-Css-Framework/Geeks_UI/issues)**
 - **💬 [Discussions](https://github.com/Geeks-UI-Css-Framework/Geeks_UI/discussions)**
 - **🎯 [Examples](https://github.com/Geeks-UI-Css-Framework/Geeks_UI/tree/main/demo)**
@@ -97,13 +97,13 @@ This project is licensed under the [MIT License](https://github.com/Geeks-UI-Css
 
 ## 🌐 Community
 
-- **🏠 [GeeksforGeeks](https://www.geeksforgeeks.org)**
+- **🏠 [Geeks UI Website](https://geeks-ui-css-framework.github.io/geeksui.github.io/)**
 - **📚 [GitHub Repository](https://github.com/Geeks-UI-Css-Framework/Geeks_UI)**
-- **🐦 [Twitter](https://twitter.com/geeksforgeeks)**
-- **✉️ [Contact Us](mailto:contribute@geeksforgeeks.org)**
+- **🐦 [Follow Us](https://geeks-ui-css-framework.github.io/geeksui.github.io/)**
+- **✉️ [Contact Us](mailto:joeycadieux161@gmail.com)**
 
 ---
 
-**Built with ❤️ for the developer community by GeeksforGeeks**
+**Built with ❤️ for the developer community by Geeks UI Framework**
 
-*© 2025 GeeksforGeeks. All rights reserved.*
+*© 2025 Geeks UI Framework. All rights reserved.*
