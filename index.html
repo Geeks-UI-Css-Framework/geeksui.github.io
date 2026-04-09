@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<meta name="description"
-    content="Geeks UI v2.0 - A comprehensive CSS framework with 15+ components including forms, cards, modals, progress bars, tabs, and more. Available as NPM package! Install with 'npm install geeks-ui-framework@2.0.0'.">
 <html lang="en">
 
 <head>
@@ -9,8 +7,51 @@
     <title>Geeks UI v2.0.2 - Modern CSS Framework | 15+ Components Available</title>
     <meta name="description"
         content="A comprehensive CSS framework with 15+ components including forms, cards, modals, progress bars, tabs, and more. Available as NPM package! Install with 'npm install geeks-ui-framework'.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://geeksui.github.io/">
+    <meta property="og:title" content="Geeks UI v2.0.2 - Modern CSS Framework">
+    <meta property="og:description" content="A comprehensive CSS framework with 15+ beautiful components. Build stunning interfaces in minutes.">
+    <meta property="og:image" content="https://geeksui.github.io/og-image.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://geeksui.github.io/">
+    <meta name="twitter:title" content="Geeks UI v2.0.2 - Modern CSS Framework">
+    <meta name="twitter:description" content="A comprehensive CSS framework with 15+ beautiful components. Build stunning interfaces in minutes.">
+    <meta name="twitter:image" content="https://geeksui.github.io/twitter-image.png">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="GeeksUI/dist/geeks-ui.min.css" as="style">
     <link rel="stylesheet" href="GeeksUI/dist/geeks-ui.min.css">
+    <link rel="canonical" href="https://geeksui.github.io/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
     <style>
+        /* CSS Custom Properties for theming */
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --success-color: #28a745;
+            --danger-color: #dc3545;
+            --warning-color: #ffc107;
+            --info-color: #17a2b8;
+            --text-primary: #333;
+            --text-secondary: #666;
+            --text-muted: #95a5a6;
+            --bg-light: #f8f9fa;
+            --border-color: #e9ecef;
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
+            --transition-speed: 0.3s;
+            --border-radius: 8px;
+            --border-radius-lg: 12px;
+            --border-radius-xl: 16px;
+        }
         /* Landing Page Styles */
         * {
             margin: 0;
@@ -18,10 +59,50 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--text-primary);
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Accessibility improvements */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            z-index: 9999;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Focus styles for accessibility */
+        :focus-visible {
+            outline: 3px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        /* Reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
         }
 
         /* Alert Bar Styles */
@@ -852,36 +933,39 @@
 </head>
 
 <body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Professional Alert Bar -->
-    <div class="alert-bar" id="alertBar">
+    <div class="alert-bar" id="alertBar" role="alert" aria-label="Announcement">
         <div class="alert-content">
             <span class="badge">NEW</span>
             <span class="message">🚀 Geeks UI v2.0.2 is here with 15+ new components!</span>
             <a href="#demo" class="cta-link">Explore Components</a>
         </div>
-        <button class="close-btn" onclick="closeAlert()">&times;</button>
+        <button class="close-btn" onclick="closeAlert()" aria-label="Close announcement">&times;</button>
     </div>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
         <div class="hero-content">
-            <div class="version-badge">⚡ v2.0.2 - Latest Release</div>
-            <h1>Geeks UI Framework</h1>
+            <div class="version-badge" role="status">⚡ v2.0.2 - Latest Release</div>
+            <h1 id="hero-title">Geeks UI Framework</h1>
             <p class="subtitle">A modern, lightweight CSS framework with 15+ beautiful components. Build stunning
                 interfaces in minutes, not hours.</p>
 
             <div class="hero-actions">
-                <a href="#demo" class="btn-primary">
+                <a href="#demo" class="btn-primary" aria-label="View component showcase">
                     🎨 View Components
-                </a> <a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI" class="btn-secondary">
+                </a> <a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI" class="btn-secondary" rel="noopener noreferrer" target="_blank">
                     📚 View on GitHub
                 </a>
             </div>
-            <div class="install-command">
-                npm install geeks-ui-framework@2.0.2
+            <div class="install-command" role="region" aria-label="Installation command">
+                <code>npm install geeks-ui-framework@2.0.2</code>
             </div>
 
-            <div class="hero-stats">
+            <div class="hero-stats" aria-label="Framework statistics">
                 <div class="stat">
                     <span class="stat-number">15+</span>
                     <span class="stat-label">Components</span>
@@ -899,38 +983,39 @@
     </section>
 
     <!-- Features Section -->
-    <section class="section">
+    <section class="section" aria-labelledby="features-title">
         <div class="container">
-            <h2>Why Choose Geeks UI?</h2>
+            <h2 id="features-title">Why Choose Geeks UI?</h2>
             <p class="subtitle">Built with modern web standards and developer experience in mind</p>
 
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">⚡</div>
                     <h3>Lightning Fast</h3>
                     <p>Optimized CSS with minimal file size. Load times that won't slow down your project.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">📱</div>
                     <h3>Mobile First</h3>
                     <p>Responsive design that looks great on all devices, from mobile to desktop.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🎨</div>
                     <h3>Customizable</h3>
                     <p>Easy to customize with CSS variables. Match your brand colors effortlessly.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔧</div>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🔧</div>
                     <h3>Developer Friendly</h3>
                     <p>Simple class names, clear documentation, and easy integration with any project.</p>
-                </div>
+                </article>
             </div>
         </div>
     </section> <!-- Demo Section -->
-    <section class="section demo-section" id="demo">
+    <main id="main-content">
+    <section class="section demo-section" id="demo" aria-labelledby="demo-title">
         <div class="container">
-            <h2>🎨 Component Showcase</h2>
+            <h2 id="demo-title">🎨 Component Showcase</h2>
             <p class="subtitle">Explore all the beautiful, ready-to-use components in Geeks UI Framework v2.0.2</p>
 
             <div style="text-align: center; margin: 2rem 0;">
@@ -1262,28 +1347,31 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" aria-labelledby="footer-title">
         <div class="footer-content">
             <div class="footer-grid">
                 <!-- About Section -->
                 <div class="footer-section">
-                    <h3>🚀 Geeks UI</h3>
+                    <h3 id="footer-title">🚀 Geeks UI</h3>
                     <p>A modern, lightweight CSS framework designed for developers who want to build beautiful
                         interfaces quickly and efficiently.</p>
-                    <div class="social-links"> <a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI"
-                            class="social-link" title="GitHub">
+                    <div class="social-links"> 
+                        <a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI"
+                            class="social-link" title="GitHub" aria-label="View on GitHub" rel="noopener noreferrer" target="_blank">
                             📚
-                        </a> <a href="https://geeks-ui-css-framework.github.io/geeksui.github.io/" class="social-link"
-                            title="NPM v2.0.2">
+                        </a> 
+                        <a href="https://www.npmjs.com/package/geeks-ui-framework" class="social-link"
+                            title="NPM v2.0.2" aria-label="View on NPM" rel="noopener noreferrer" target="_blank">
                             📦
                         </a>
-                        <a href="#" class="social-link" title="Twitter">
+                        <a href="#" class="social-link" title="Twitter" aria-label="Follow us on Twitter">
                             🐦
                         </a>
                         <a href="https://geeks-ui-css-framework.github.io/geeksui.github.io/" class="social-link"
-                            title="Geeks_UI Framework">
+                            title="Geeks_UI Framework" aria-label="Visit Geeks UI website">
                             🌐
                         </a>
                     </div>
@@ -1291,54 +1379,54 @@
 
                 <!-- Quick Links -->
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
+                    <h3 id="quick-links-title">Quick Links</h3>
+                    <ul aria-labelledby="quick-links-title">
                         <li><a href="#demo">🎨 Components</a></li>
-                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/blob/main/README.md">📖
+                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/blob/main/README.md" rel="noopener noreferrer" target="_blank">📖
                                 Documentation</a>
                         </li>
-                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/releases">📋 Changelog</a></li>
-                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/issues">🐛 Report Issues</a>
+                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/releases" rel="noopener noreferrer" target="_blank">📋 Changelog</a></li>
+                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/issues" rel="noopener noreferrer" target="_blank">🐛 Report Issues</a>
                         </li>
-                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/discussions">💬 Discussions</a>
+                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/discussions" rel="noopener noreferrer" target="_blank">💬 Discussions</a>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Resources -->
                 <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/blob/main/INSTALL.md">⚡ Getting
+                    <h3 id="resources-title">Resources</h3>
+                    <ul aria-labelledby="resources-title">
+                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/blob/main/INSTALL.md" rel="noopener noreferrer" target="_blank">⚡ Getting
                                 Started</a></li>
                         <li><a
-                                href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/blob/main/NPM-PUBLISHING-GUIDE.md">📦
+                                href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/blob/main/NPM-PUBLISHING-GUIDE.md" rel="noopener noreferrer" target="_blank">📦
                                 NPM
                                 Guide</a></li>
-                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/blob/main/DEPLOYMENT.md">🚀
+                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/blob/main/DEPLOYMENT.md" rel="noopener noreferrer" target="_blank">🚀
                                 Deployment</a></li>
-                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/tree/main/demo">🎯 Examples</a>
+                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/tree/main/demo" rel="noopener noreferrer" target="_blank">🎯 Examples</a>
                         </li>
-                        <li><a href="https://geeks-ui-css-framework.github.io/geeksui.github.io/">🎨 CSS Tutorials</a>
+                        <li><a href="https://geeks-ui-css-framework.github.io/geeksui.github.io/" rel="noopener noreferrer" target="_blank">🎨 CSS Tutorials</a>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Community -->
                 <div class="footer-section">
-                    <h3>Community</h3>
-                    <ul>
-                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/blob/main/CONTRIBUTING.md">🤝
+                    <h3 id="community-title">Community</h3>
+                    <ul aria-labelledby="community-title">
+                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/blob/main/CONTRIBUTING.md" rel="noopener noreferrer" target="_blank">🤝
                                 Contributing</a></li>
-                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/blob/main/CODE_OF_CONDUCT.md">📜
+                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/blob/main/CODE_OF_CONDUCT.md" rel="noopener noreferrer" target="_blank">📜
                                 Code
                                 of
                                 Conduct</a></li>
-                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/blob/main/LICENSE">⚖️
+                        <li><a href="https://github.com/Geeks-UI-Css-Framework/Geeks_UI/blob/main/LICENSE" rel="noopener noreferrer" target="_blank">⚖️
                                 License</a>
                         </li>
-                        <li><a href="https://geeks-ui-css-framework.github.io/geeksui.github.io/">🏠 Home</a></li>
-                        <li><a href="mailto:joeycadieux161@gmail.com, joey@tech-center.com">✉️ Contact Us</a></li>
+                        <li><a href="#hero">🏠 Home</a></li>
+                        <li><a href="mailto:joeycadieux161@gmail.com">✉️ Contact Us</a></li>
                     </ul>
                 </div>
             </div>
